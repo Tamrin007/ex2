@@ -1,0 +1,11 @@
+{
+    "name": "watching-dog",
+    "version": "0.1.0",
+    "main": "main.js",
+    "scripts": {
+        "build": "electron ."
+    },
+    "dependencies": {
+        "electron": "^1.6.10"
+    }
+}

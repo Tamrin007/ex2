@@ -6,6 +6,7 @@
         "build": "electron ."
     },
     "dependencies": {
-        "electron": "^1.6.10"
+        "electron": "^1.6.10",
+        "electron-packager": "^8.7.0"
     }
 }

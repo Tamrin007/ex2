@@ -1,13 +1,27 @@
 {
-    "name": "watching-dog",
-    "version": "0.1.0",
-    "main": "main.js",
-    "scripts": {
-        "build": "electron ."
-    },
-    "dependencies": {
-        "electron": "^1.6.10",
-        "electron-packager": "^8.7.0",
-        "jquery": "^3.2.1"
-    }
+  "name": "watching-face",
+  "version": "1.0.0",
+  "description": "動画鑑賞中の顔をキャプチャし、感情を推定するアプリケーション",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --overwrite --platform=darwin --arch=x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tamrin007/watching-face.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tamrin007/watching-face/issues"
+  },
+  "homepage": "https://github.com/Tamrin007/watching-face#readme",
+  "dependencies": {
+    "fs-extra": "^3.0.1",
+    "jquery": "^3.2.1"
+  }
 }

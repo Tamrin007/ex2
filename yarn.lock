@@ -3,8 +3,8 @@
 
 
 "@types/node@^7.0.18":
-  version "7.0.22"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.22.tgz#4593f4d828bdd612929478ea40c67b4f403ca255"
+  version "7.0.29"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.29.tgz#ccfcec5b7135c7caf6c4ffb8c7f33102340d99df"
 
 abbrev@1:
   version "1.1.0"
@@ -99,10 +99,6 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^0.4.1"
     concat-map "0.0.1"
-
-buffer-shims@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
 buffers@~0.1.1:
   version "0.1.1"
@@ -270,8 +266,8 @@ electron-download@^4.0.0:
     sumchecker "^2.0.1"
 
 electron-osx-sign@^0.4.1:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/electron-osx-sign/-/electron-osx-sign-0.4.5.tgz#59037cae6ac05ba9e802f76d9bb772b31a8c75c7"
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/electron-osx-sign/-/electron-osx-sign-0.4.6.tgz#2398e2d7cab5c1d8c3eeabb1cd490376528ec39a"
   dependencies:
     bluebird "^3.4.7"
     compare-version "^0.1.2"
@@ -281,9 +277,9 @@ electron-osx-sign@^0.4.1:
     plist "^2.0.1"
     tempfile "^1.1.1"
 
-electron-packager@^8.7.0:
-  version "8.7.0"
-  resolved "https://registry.yarnpkg.com/electron-packager/-/electron-packager-8.7.0.tgz#3a2b82219f0046b48130ccfc26764f149de7b9d2"
+electron-packager@^8.7.1:
+  version "8.7.1"
+  resolved "https://registry.yarnpkg.com/electron-packager/-/electron-packager-8.7.1.tgz#22607a44116cb4c1bce72246783990cae4fcf903"
   dependencies:
     asar "^0.13.0"
     debug "^2.2.0"
@@ -397,7 +393,7 @@ fs-extra@^2.0.0:
     graceful-fs "^4.1.2"
     jsonfile "^2.1.0"
 
-fs-extra@^3.0.0:
+fs-extra@^3.0.0, fs-extra@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-3.0.1.tgz#3794f378c58b342ea7dbbb23095109c4b3b62291"
   dependencies:
@@ -563,12 +559,6 @@ isbinaryfile@^3.0.2:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
-
-jodid25519@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
-  dependencies:
-    jsbn "~0.1.0"
 
 jquery@^3.2.1:
   version "3.2.1"
@@ -949,14 +939,14 @@ readable-stream@^1.1.8, readable-stream@~1.1.9:
     string_decoder "~0.10.x"
 
 readable-stream@^2.2.2:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.9.tgz#cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8"
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.11.tgz#0796b31f8d7688007ff0b93a8088d34aa17c0f72"
   dependencies:
-    buffer-shims "~1.0.0"
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
+    safe-buffer "~5.0.1"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
 
@@ -1017,6 +1007,10 @@ run-series@^1.1.1:
   resolved "https://registry.yarnpkg.com/run-series/-/run-series-1.1.4.tgz#89a73ddc5e75c9ef8ab6320c0a1600d6a41179b9"
 
 safe-buffer@^5.0.1:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.0.tgz#fe4c8460397f9eaaaa58e73be46273408a45e223"
+
+safe-buffer@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
@@ -1065,8 +1059,8 @@ speedometer@~0.1.2:
   resolved "https://registry.yarnpkg.com/speedometer/-/speedometer-0.1.4.tgz#9876dbd2a169d3115402d48e6ea6329c8816a50d"
 
 sshpk@^1.7.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.0.tgz#ff2a3e4fd04497555fed97b39a0fd82fafb3a33c"
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.1.tgz#512df6da6287144316dc4c18fe1cf1d940739be3"
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"
@@ -1075,7 +1069,6 @@ sshpk@^1.7.0:
   optionalDependencies:
     bcrypt-pbkdf "^1.0.0"
     ecc-jsbn "~0.1.1"
-    jodid25519 "^1.0.0"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
@@ -1092,10 +1085,10 @@ string_decoder@~0.10.x:
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
 string_decoder@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.1.tgz#62e200f039955a6810d8df0a33ffc0f013662d98"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.2.tgz#b29e1f4e1125fa97a10382b8a533737b7491e179"
   dependencies:
-    safe-buffer "^5.0.1"
+    safe-buffer "~5.0.1"
 
 stringstream@~0.0.4:
   version "0.0.5"

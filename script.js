@@ -1,5 +1,9 @@
-var $ = require('jQuery');
+var $ = require('jquery');
+// var fs = require('fs-extra');
 var isFirstTime = true;
+var emotions = [];
+var expressions = [];
+var video = document.getElementById("video");
 
 // SDK Needs to create video and canvas nodes in the DOM in order to function
 // Here we are adding those nodes a predefined div.
@@ -33,6 +37,7 @@ function onStart() {
         detector.start();
     }
     log('#logs', "Clicked the start button");
+	$("#start").hide();
 }
 
 //function executes when the Stop button is pushed.
@@ -41,7 +46,14 @@ function onStop() {
     if (detector && detector.isRunning) {
         detector.removeEventListener();
         detector.stop();
-    }
+	}
+	console.log(emotions);
+	var time = new Date();
+	var dirName = __dirname + '/../../../../' + time.getFullYear() + '_' + time.getMonth() + '_' + time.getDate() + '/';
+	var fileNameEmotions = 'emotions.json';
+	writeFile(dirName, fileNameEmotions, JSON.stringify(emotions, null, ' '));
+	var fileNameExpressions = 'expressions.json';
+	writeFile(dirName, fileNameExpressions, JSON.stringify(expressions, null, ' '));
 };
 
 //function executes when the Reset button is pushed.
@@ -76,20 +88,30 @@ detector.addEventListener("onStopSuccess", function() {
 //Faces object contains probabilities for all the different expressions, emotions and appearance metrics
 detector.addEventListener("onImageResultsSuccess", function(faces, image, timestamp) {
     if (isFirstTime) {
-        document.getElementById("video").play();
-    } else {
+        video.play();
+		console.log("first");
         isFirstTime = false;
     }
-    $('#results').html("");
-    log('#results', "Timestamp: " + timestamp.toFixed(2));
-    log('#results', "Number of faces found: " + faces.length);
+    console.log("Timestamp: " + video.currentTime);
     if (faces.length > 0) {
-        log('#results', "Emotions: " + JSON.stringify(faces[0].emotions, function(key, val) {
-            return val.toFixed ? Number(val.toFixed(0)) : val;
-        }));
-        log('#results', "Expressions: " + JSON.stringify(faces[0].expressions, function(key, val) {
-            return val.toFixed ? Number(val.toFixed(0)) : val;
-        }));
+        faces[0].emotions.timestamp = video.currentTime;
+        emotions.push(faces[0].emotions);
+        faces[0].expressions.timestamp = video.currentTime;
+        expressions.push(faces[0].expressions);
     }
 });
+
+video.addEventListener("ended", function(){
+	onStop();
+}, true);
+
+function writeFile(path, file, data) {
+	fs.mkdirsSync(path);
+	console.log(path);
+	fs.writeFile(path + file, data, function(error) {
+		if (error != null) {
+			alert('error : ' + error);
+		}
+	});
+}
 

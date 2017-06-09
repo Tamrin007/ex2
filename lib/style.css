@@ -1,0 +1,23 @@
+html {
+    position: fixed;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.back {
+    background: hsl(0, 0%, 14%);
+    height: 100vh;
+}
+
+.white-font {
+    color: hsl(0, 0%, 86%);
+}
+
+.centering-inline {
+    text-align: center
+}
+
+#start {
+    width: 100px;
+}
+

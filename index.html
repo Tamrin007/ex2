@@ -3,31 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>Watching Face</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+        <link rel="stylesheet" href="./lib/style.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8"><video id="video" src="./lib/videos/video.mp4" width="100%"></video></div>
-                <div class="col-md-8" id="affdex_elements" style="width:680px;height:480px;"></div>
-                <div class="col-md-4">
-                    <div style="height:25em;">
-                        <strong>EMOTION TRACKING RESULTS</strong>
-                        <div id="results" style="word-wrap:break-word;"></div>
-                    </div>
-                    <div>
-                        <strong>DETECTOR LOG MSGS</strong>
-                    </div>
-                    <div id="logs"></div>
+        <div class="section back">
+            <h1 class="title white-font">実験システム</h1>
+            <h2 class="subtitle white-font">No.1</h2>
+            <div class="columns">
+                <div class="column is-10 is-offset-1 is-8-desktop is-offset-2-desktop">
+                    <video id="video" src="./lib/videos/video.mp4" width="100%"></video>
                 </div>
             </div>
-            <div>
-                <button id="start" onclick="onStart()">Start</button>
-                <button id="stop" onclick="onStop()">Stop</button>
-                <button id="reset" onclick="onReset()">Reset</button>
-                <h3>Affectiva JS SDK CameraDetector to track different emotions.</h3>
+            <div class="centering-inline">
+                <button class="button is-danger is-outlined" id="start" onclick="onStart()">
+                    <span class="icon">
+                        <i class="fa fa-play"></i>
+                    </span>
+                </button>
             </div>
         </div>
-        <script type="text/javascript" src="https://download.affectiva.com/js/3.2/affdex.js">
+        <div class="culumns">
+            <div class="column" id="affdex_elements" style="width:680px;height:480px;"></div>
+        </div>
+        <script type="text/javascript" src="https://download.affectiva.com/js/3.2/affdex.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="./lib/script.js"></script>
     </body>

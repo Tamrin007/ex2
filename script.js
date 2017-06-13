@@ -50,9 +50,9 @@ function onStop() {
 	console.log(emotions);
 	var time = new Date();
 	var dirName = __dirname + '/../../../../' + time.getFullYear() + '_' + time.getMonth() + '_' + time.getDate() + '/';
-	var fileNameEmotions = 'emotions.json';
+	var fileNameEmotions = ('0' + time.getHours()).slice(-2) + '_' +('0' + time.getMinutes()).slice(-2) + '_emotions.json';
 	writeFile(dirName, fileNameEmotions, JSON.stringify(emotions, null, ' '));
-	var fileNameExpressions = 'expressions.json';
+	var fileNameExpressions = ('0' + time.getHours()).slice(-2) + '_' + ('0' + time.getMinutes()).slice(-2) + '_expressions.json';
 	writeFile(dirName, fileNameExpressions, JSON.stringify(expressions, null, ' '));
 };
 

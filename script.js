@@ -1,5 +1,5 @@
 var $ = require('jquery');
-// var fs = require('fs-extra');
+var fs = require('fs-extra');
 var isFirstTime = true;
 var emotions = [];
 var expressions = [];
